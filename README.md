@@ -1,6 +1,8 @@
 # DataEngineering: data_modelling_aws 
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their dataset comprises user logs and music records resides in S3, in a directory of JSON user logs (user activity), as well as a directory with JSON song metadata. This repo is builds an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of SQL fact and dimension tables (basically an unstructured to structured transformation).
 
+[Dataset](http://millionsongdataset.com/ )
+
 ## Database design:
 The database is split into two schemas, staging and final.
 
