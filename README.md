@@ -83,11 +83,11 @@ The final schema follows the star schema principle. The tables are listed below:
 * weekday VARCHAR
 ## Code:
 ### Functional content
-*create_tables.py - connects to redshift, drops and creates schemas, dbs and tables
-*etl.py - copies json data from s3 buckets into redshift staging, transforms and loads into the final (star) schema. DUPLICATE ENTRIES are handled with ON CONFLICT DO NOTHING.
-*sql_queries - all sql code resides here and is called from the above two modules.
+* create_tables.py - connects to redshift, drops and creates schemas, dbs and tables
+* etl.py - copies json data from s3 buckets into redshift staging, transforms and loads into the final (star) schema. DUPLICATE ENTRIES are handled with ON CONFLICT DO NOTHING.
+* sql_queries - all sql code resides here and is called from the above two modules.
 
 ## How to execute :
-*create an AWS Redshift cluster, noting the following details: [endpoint, db name, db user, db password, db port]
-*open dwh.cfg and overwrite CLUSTER>HOST, DB_NAME, DB_USER, DB_PASSWORD, and DB_PORT, with the relevant details.
-*In a terminal in /home/workspace, run python etl.py
+* create an AWS Redshift cluster, noting the following details: [endpoint, db name, db user, db password, db port]
+* open dwh.cfg and overwrite CLUSTER>HOST, DB_NAME, DB_USER, DB_PASSWORD, and DB_PORT, with the relevant details.
+* In a terminal in /home/workspace, run python etl.py
